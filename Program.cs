@@ -60,7 +60,7 @@ namespace PowerTracker
 
         static TimeSpan RetrieveCurrentTime() => TimeSpan.FromTicks(DateTime.Now.Ticks);
 
-        static void GetShittyProcessorInfo()
+        static void GetProcessorInfo()
         {
             foreach (var hardware in c.Hardware)
             {
@@ -192,7 +192,7 @@ namespace PowerTracker
 
                 while (true)
                 {
-                    GetShittyProcessorInfo();
+                    GetProcessorInfo();
                     Thread.Sleep(1000);
                 }
             }).Start();
